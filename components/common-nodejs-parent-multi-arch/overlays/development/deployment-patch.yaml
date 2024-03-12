@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: common-nodejs-parent-multi-arch
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/arewm-tenant/common-nodejs-parent/common-nodejs-parent-multi-arch@sha256:ce4d967f4ba41344ce7e73189bbda6c1f0b8bbc259bc92b9f037495bac412a4b
+        name: container-image
+        resources: {}
+status: {}
